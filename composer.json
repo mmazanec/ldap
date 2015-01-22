@@ -1,0 +1,26 @@
+{
+    "name": "mmazanec/ldap",
+    "description": "Helper to provide ldap functionality via adldap/adLDAP in Laravel 4.2",
+    "keywords": ["Laravel", "Ldap", "Active Directory"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Mazanec",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "adldap/adldap": "4.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Mmazanec\\Ldap\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
