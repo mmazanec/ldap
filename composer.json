@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "illuminate/support": "4.2.*",
-        "adldap/adldap": "4.*"
+        "stevebauman/adldap-fork": "4.0.*"
     },
     "autoload": {
         "classmap": [

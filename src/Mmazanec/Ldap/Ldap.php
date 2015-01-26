@@ -41,7 +41,7 @@ class Ldap
    */
   public function getGroup($groupName)
   {
-    return$this->adldap->group()->info($groupName);
+    return $this->adldap->group()->info($groupName);
   }
 
   /**
@@ -52,7 +52,7 @@ class Ldap
    */
   public function getUser($userName)
   {
-    return$this->adldap->user()->info($userName);
+    return $this->adldap->user()->info($userName);
   }
 
   /**
@@ -62,6 +62,17 @@ class Ldap
    */
   public function getUserGroups($userName)
   {
-
+      return $this->adldap->user()->groups($userName);
+  }
+    
+  /**
+  *  Determine if a user belongs to a specified group
+  *
+  * @param $userName
+  * @param $groupName
+  */
+  public function inGroup($userName, $groupName)
+  {
+      return $this->adldap->user()->inGroup($userName, $groupName);
   }
 }
