@@ -25,13 +25,11 @@ class Ldap
    * @param $userName
    * @param $password
    * @return bool
-   * @throws \adLDAP\adLDAPException
    */
   public function authenticate($userName, $password)
   {
     return $this->adldap->authenticate($userName, $password);
   }
-
 
   /**
    * Get info for a group
