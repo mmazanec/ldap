@@ -3,6 +3,7 @@
 namespace Mmazanec\Ldap;
 
 use adLDAP\adLDAP;
+use Mmazanec\Ldap\Objects\User;
 
 class Ldap
 {
@@ -46,11 +47,17 @@ class Ldap
    * Get user data from AD
    *
    * @param $userName
-   * @return array
+   * @return mixed
    */
   public function getUser($userName)
   {
-    return $this->adldap->user()->info($userName);
+    $adUser = $this->adldap->user()->info($userName);
+    if(!empty($adUser))
+    {
+      return new User($adUser);
+    }
+
+    return false;
   }
 
   /**
