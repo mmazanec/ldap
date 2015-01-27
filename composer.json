@@ -15,9 +15,6 @@
         "stevebauman/adldap-fork": "4.0.*"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Mmazanec\\Ldap\\": "src/"
         }
