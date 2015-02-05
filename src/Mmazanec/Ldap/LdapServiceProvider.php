@@ -18,7 +18,9 @@ class LdapServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('mmazanec/ldap');
+		$this->publishes([
+						dirname(__FILE__).'/../../config/ldap.php' => config_path('ldap.php'),
+		], 'config');
 	}
 
 	/**
@@ -57,7 +59,6 @@ class LdapServiceProvider extends ServiceProvider {
 	 */
 	public function getConfig()
 	{
-		//if(!$this->app['config']['ldap']) throw new Exception('LDAP config not found. Check if app/config/ldap.php exists.');
 		return $this->app['config']['ldap'];
 	}
 
